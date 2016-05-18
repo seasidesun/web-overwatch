@@ -25,6 +25,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', hbs.engine);
 app.set('view engine', '.hbs');
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(favicon(__dirname + '/favicon.ico'));
 
 app.use(logger('dev'));
