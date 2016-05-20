@@ -20,30 +20,46 @@
         <div class="heros">
             <div class="box-hd">
                 <h3 class="title">英雄详解</h3>
+                <div class="role">
+                    <span class="role-tank" value="tank"></span>
+                    <span class="role-defense" value="defense"></span>
+                    <span class="role-offense" value="offense"></span>
+                    <span class="role-support" value="support"></span>
+                </div>
             </div>
             <ul>
-                <li><img src="/images/hero_icon/icon-bastion.png" alt="" /><div class="name">bastion</div></li>
-                <li><img src="/images/hero_icon/icon-lucio.png" alt="" /><div class="name">lucio</div></li>
-                <li><img src="/images/hero_icon/icon-roadhog.png" alt="" /><div class="name">roadhog</div></li>
-                <li><img src="/images/hero_icon/icon-winston.png" alt="" /><div class="name">winston</div></li>
-                <li><img src="/images/hero_icon/icon-dva.png" alt="" /><div class="name">dva</div></li>
-                <li><img src="/images/hero_icon/icon-mccree.png" alt="" /><div class="name">mccree</div></li>
-                <li><img src="/images/hero_icon/icon-soldier-76.png" alt="" /><div class="name">76-hao</div></li>
-                <li><img src="/images/hero_icon/icon-zarya.png" alt="" /><div class="name">zarya</div></li>
-                <li><img src="/images/hero_icon/icon-frost.png" alt="" /><div class="name">frost</div></li>
-                <li><img src="/images/hero_icon/icon-mercy.png" alt="" /><div class="name">mercy</div></li>
-                <li><img src="/images/hero_icon/icon-symmetra.png" alt="" /><div class="name">symmetra</div></li>
-                <li><img src="/images/hero_icon/icon-zenyatta.png" alt="" /><div class="name">zenyatta</div></li>
-                <li><img src="/images/hero_icon/icon-genji.png" alt="" /><div class="name">genji</div></li>
-                <li><img src="/images/hero_icon/icon-pharah.png" alt="" /><div class="name">pharah</div></li>
-                <li><img src="/images/hero_icon/icon-torbjorn.png" alt="" /><div class="name">torbjorn</div></li>
-                <li><img src="/images/hero_icon/icon-hanzo.png" alt="" /><div class="name">hanzo</div></li>
-                <li><img src="/images/hero_icon/icon-reaper.png" alt="" /><div class="name">reaper</div></li>
-                <li><img src="/images/hero_icon/icon-tracer.png" alt="" /><div class="name">tracer</div></li>
-                <li><img src="/images/hero_icon/icon-junkrat.png" alt="" /><div class="name">junkrat</div></li>
-                <li><img src="/images/hero_icon/icon-reinhardt.png" alt="" /><div class="name">reinhardt</div></li>
-                <li><img src="/images/hero_icon/icon-widowmaker.png" alt="" /><div class="name">widowmaker</div></li>
+                <li value="defense"><img src="/images/hero_icon/icon-bastion.png" alt="" /><div class="name">bastion</div></li>
+                <li value="support"><img src="/images/hero_icon/icon-lucio.png" alt="" /><div class="name">lucio</div></li>
+                <li value="tank"><img src="/images/hero_icon/icon-roadhog.png" alt="" /><div class="name">roadhog</div></li>
+                <li value="tank"><img src="/images/hero_icon/icon-winston.png" alt="" /><div class="name">winston</div></li>
+                <li value="tank"><img src="/images/hero_icon/icon-dva.png" alt="" /><div class="name">dva</div></li>
+                <li value="offense"><img src="/images/hero_icon/icon-mccree.png" alt="" /><div class="name">mccree</div></li>
+                <li value="offense"><img src="/images/hero_icon/icon-soldier-76.png" alt="" /><div class="name">76-hao</div></li>
+                <li value="tank"><img src="/images/hero_icon/icon-zarya.png" alt="" /><div class="name">zarya</div></li>
+                <li value="defense"><img src="/images/hero_icon/icon-frost.png" alt="" /><div class="name">frost</div></li>
+                <li value="support"><img src="/images/hero_icon/icon-mercy.png" alt="" /><div class="name">mercy</div></li>
+                <li value="support"><img src="/images/hero_icon/icon-symmetra.png" alt="" /><div class="name">symmetra</div></li>
+                <li value="support"><img src="/images/hero_icon/icon-zenyatta.png" alt="" /><div class="name">zenyatta</div></li>
+                <li value="offense"><img src="/images/hero_icon/icon-genji.png" alt="" /><div class="name">genji</div></li>
+                <li value="offense"><img src="/images/hero_icon/icon-pharah.png" alt="" /><div class="name">pharah</div></li>
+                <li value="defense"><img src="/images/hero_icon/icon-torbjorn.png" alt="" /><div class="name">torbjorn</div></li>
+                <li value="defense"><img src="/images/hero_icon/icon-hanzo.png" alt="" /><div class="name">hanzo</div></li>
+                <li value="offense"><img src="/images/hero_icon/icon-reaper.png" alt="" /><div class="name">reaper</div></li>
+                <li value="offense"><img src="/images/hero_icon/icon-tracer.png" alt="" /><div class="name">tracer</div></li>
+                <li value="defense"><img src="/images/hero_icon/icon-junkrat.png" alt="" /><div class="name">junkrat</div></li>
+                <li value="tank"><img src="/images/hero_icon/icon-reinhardt.png" alt="" /><div class="name">reinhardt</div></li>
+                <li value="defense"><img src="/images/hero_icon/icon-widowmaker.png" alt="" /><div class="name">widowmaker</div></li>
             </ul>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $('.role span').each(function () {
+        $(this).click(function () {
+            $('.role span.active').removeClass('active');
+            $(this).addClass('active');
+            var roleType = $(this).attr("value");
+        });
+    });
+</script>

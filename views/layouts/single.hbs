@@ -8,7 +8,12 @@
         {{/if}}
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
         <style media="screen">
+            @font-face {
+                font-family: ow_icon;
+                src: url(/stylesheets/ow.ttf)
+            }
             body {
                 width: 100%;
                 max-width: 1400px;
@@ -47,6 +52,7 @@
             }
 
             .box-hd {
+                position: relative;
                 margin-left: 10px;
                 border-bottom: 1px solid #EAEAEA;
             }
@@ -62,7 +68,39 @@
                 margin-bottom: -1px;
                 border-bottom: 2px solid #3a6ecc;
             }
+            .heros .role {
+                position: absolute;
+                display: inline-block;
+                right: 10px;
+                bottom: 0;
+                font-family: ow_icon;
+                font-size: larger;
+                font-style: normal;
+                line-height: 2rem;
+                vertical-align: middle;
+                color: #9E9E9E;
+            }
+            .heros .role span {
+                margin-right: 5px;
+            }
+            .heros .role .role-tank:before {
+                content: '\e614';
+            }
 
+            .heros .role .role-defense:before {
+                content: '\e615';
+            }
+
+            .heros .role .role-offense:before {
+                content: '\e616';
+            }
+
+            .heros .role .role-support:before {
+                content: '\e617';
+            }
+            .heros .role .active {
+                color: #00c3ff;
+            }
             .heros ul {
                 padding-left: 10px;
             }
@@ -121,14 +159,12 @@
             .maps ul {
                 padding-left: 10px;
             }
-
             .maps ul li {
                 display: inline-block;
                 width: 190px;
                 height: 120px;
                 margin: 10px;
             }
-
             .maps ul li img {
                 display: block;
                 width: 100%;
