@@ -15,6 +15,7 @@
                 src: url(/stylesheets/ow.ttf)
             }
             body {
+                background-image: url('/images/back01.jpg');
                 width: 1200px;
                 margin-left: auto;
                 margin-right: auto;
@@ -27,14 +28,10 @@
             }
             .top {
                 width: 100%;
-                height: 500px;
-                opacity: 0.95;
-                margin-top: -100px;
+                height: 300px;
                 margin-bottom: 20px;
-                overflow: hidden;
             }
             .top img {
-                width: 100%;
                 display: block;
             }
             .heros {
@@ -45,9 +42,10 @@
                 padding: 8px 5px 10px 5px;
                 box-sizing: border-box;
 
-                border: 1.5px solid #eee;
-                box-shadow: 2px 5px 2px #eee;
+                /*border: 1.5px solid #eee;*/
+                /*box-shadow: 2px 5px 2px #eee;*/
                 background-color: #fff;
+                background: rgba(255, 255, 255, 0.35);
             }
 
             .box-hd {
@@ -158,8 +156,9 @@
                 padding: 8px 5px 10px 5px;
 
                 background-color: #fff;
-                border: 1.5px solid #eee;
-                box-shadow: 2px 5px 2px #eee;
+                background: rgba(255, 255, 255, 0.35);
+                /*border: 1.5px solid #eee;*/
+                /*box-shadow: 2px 5px 2px #eee;*/
             }
             .maps ul {
                 position: relative;
@@ -211,8 +210,9 @@
                 padding: 8px 5px 10px 5px;
 
                 background-color: #fff;
-                border: 1.5px solid #eee;
-                box-shadow: 2px 5px 2px #eee;
+                background: rgba(255, 255, 255, 0.35);
+                /*border: 1.5px solid #eee;*/
+                /*box-shadow: 2px 5px 2px #eee;*/
             }
 
             .blogroll ul {
@@ -242,9 +242,21 @@
         </style>
     </head>
     <body>
+        <img src="/images/left01.png" alt="" / style="   display:none; position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin-left: -41%;">
+        <img src="/images/right01.png" alt="" / style=" display:none; position: fixed;
+    width: 100%;
+    right: 0;
+    top: 0;
+    margin-right: -41%;">
         <div class="body">
             <div class="top">
-                <img src="/images/0_0.jpg" alt="" />
+                <img src="/images/hanzo-genji.png" alt="" />
+
+                <!-- <img src="/images/0_0.jpg" alt="" /> -->
             </div>
         {{{ body }}}
         </div>
