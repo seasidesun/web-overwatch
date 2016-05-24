@@ -22,8 +22,15 @@
     }
 
     .map-intro .loading-map {
-        margin-right: 20px;
+        height: 140px;
+        margin: 0 20px 17.5px 10px;
+        /*margin-bottom: 17.5px;
+        margin-right: 20px;*/
         padding-right: 20px;
+    }
+
+    .map-intro .loading-map img{
+        height: 100%;
     }
 
     .map-intro .loading-map::after {
@@ -40,7 +47,7 @@
     .map-intro .intro {
         padding-left: 0px;
         margin-left: 0px;
-        width: 825px;
+        width: 870px;
     }
 
     .map-intro .intro .country {
@@ -94,7 +101,7 @@
 
     <div class="box map-intro">
         <div class="loading-map">
-            <img src="/images/maps/temple-of-anubis-thumb.jpg" alt="" />
+            <img src="/images/maps/{{mapInfo.name_en}}-thumb.jpg" alt="" />
         </div>
         <div class="intro">
             <div class="country">
