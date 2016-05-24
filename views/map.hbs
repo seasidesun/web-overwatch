@@ -74,20 +74,20 @@
     }
 
     .map-content .item {
+        text-align: center;
         margin-bottom: 20px;
     }
     .map-content .text {
+        text-align: left;
         text-indent: 30px;
         line-height: 25px;
     }
-
-    .med-position {
-        text-align: center;
-        width: 100%;
+    .med-position .s-pot {
+        margin-bottom: 20px;
     }
 
-    .med-position img {
-        width: 800px;
+    .med-position .s-pot .s-pot-img {
+        width: 900px;
     }
 </style>
 <div class="map-body">
@@ -99,13 +99,13 @@
         <div class="intro">
             <div class="country">
                 <img src="/images/maps/country/Flag_Egypt_ux.jpg" alt="" />
-                <span>&nbsp阿努比斯神殿: </span>
+                <span>&nbsp {{mapInfo.name_zh}} </span>
             </div>
             <div class="text">
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp是《守望先锋》在2014年暴雪嘉年华上公布的一张游戏地图，未来科技与埃及古文明的碰撞。
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{mapInfo.introduce}}
                 <br>
                 <div class="origin">地图渊源 :</div>
-                阿努比斯是埃及神话中一位与木乃伊制作与死后生活有关的胡狼头神。在欧西里斯神话中，赛特杀害欧西里斯之后，将欧西里斯的器官送给了阿努比斯当礼物。由于这些有这些关联，阿努比斯变成了防腐员的守护神。根据死者之书中的绘图，在木乃伊制作的葬礼仪式期间祭司常会带着胡狼面具支撑著直立的木乃伊。
+                {{mapInfo.origin}}
             </div>
         </div>
     </div>
@@ -119,7 +119,7 @@
             </div>
             <br>
             <div class="text">
-                佔領: 攻擊方展開戰鬥佔領一連串目標；防守方阻止對方，直到時間結束。
+                {{mapInfo.typeInfo}}
             </div>
         </div>
         <div class="item">
@@ -130,7 +130,15 @@
             </div>
             <br>
             <div class="med-position">
-                <img src="/images/maps/459_564cbb1d9b47b.jpg" alt="" />
+                {{#each mapInfo.medpack_imgList}}
+                    <div class="s-pot">
+                        <div class="text">
+                            {{this.intro}}
+                        </div>
+                        <img class="s-pot-img" src="/images/maps/{{this.imgUrl}}" alt="" />
+                    </div>
+                {{/each}}
+
             </div>
         </div>
     </div>
