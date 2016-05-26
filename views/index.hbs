@@ -6,18 +6,21 @@
                     <h3 class="title">地图介绍（血包点)</h3>
                 </div>
                 <ul>
-                    <li><a href="/map/temple-of-anubis" target="_blank"><img src="/images/maps/temple-of-anubis-thumb.jpg" alt="" /></a><div class="intro"><span class="type"></span><span class="name">阿努比斯神殿</span></div></li>
-                    <li><a href="/map/hanamura" target="_blank"><img src="/images/maps/hanamura-thumb.jpg" alt="" /></a><div class="intro"><span class="type"></span><span class="name">花村</span></div></li>
-                    <li><a href="/map/volskaya" target="_blank"><img src="/images/maps/volskaya-thumb.jpg" alt="" /></a><div class="intro"><span class="type"></span><span class="name">沃斯卡娅工业区</span></div></li>
-                    <li><a href="/map/gibraltar" target="_blank"><img src="/images/maps/gibraltar-thumb.jpg" alt="" /></a><div class="intro"><span class="type"></span><span class="name">监测站</span></div></li>
-                    <li><a href="/map/dorado" target="_blank"><img src="/images/maps/dorado-thumb.jpg" alt="" /></a><div class="intro"><span class="type"></span><span class="name">多拉多</span></div></li>
-                    <li><a href="/map/route-66" target="_blank"><img src="/images/maps/route-66-thumb.jpg" alt="" /></a><div class="intro"><span class="type"></span><span class="name">66号公路</span></div></li>
-                    <li><a href="/map/lijiang" target="_blank"><img src="/images/maps/lijiang-thumb.jpg" alt="" /></a><div class="intro"><span class="type"></span><span class="name">漓江塔</span></div></li>
-                    <li><a href="/map/ilios" target="_blank"><img src="/images/maps/ilios-thumb.jpg" alt="" /></a><div class="intro"><span class="type"></span><span class="name">伊利奥斯</span></div></li>
-                    <li><a href="/map/nepal" target="_blank"><img src="/images/maps/nepal-thumb.jpg" alt="" /></a><div class="intro"><span class="type"></span><span class="name">尼泊尔</span></div></li>
-                    <li><a href="/map/kings-row" target="_blank"><img src="/images/maps/kings-row-thumb.jpg" alt="" /></a><div class="intro"><span class="type"></span><span class="name">国王大道</span></div></li>
-                    <li><a href="/map/numbani" target="_blank"><img src="/images/maps/numbani-thumb.jpg" alt="" /></a><div class="intro"><span class="type"></span><span class="name">努巴尼</span></div></li>
-                    <li><a href="/map/hollywood" target="_blank"><img src="/images/maps/hollywood-thumb.jpg" alt="" /></a><div class="intro"><span class="type"></span><span class="name">好莱坞</span></div></li>
+                    {{# each maps_load_img}}
+                        <li><a href="/map/{{this.name_en}}" target="_blank"><img src="{{this.load_img}}" alt="" /></a><div class="intro"><span class="type"></span><span class="name">{{this.name_zh}}</span></div></li>
+                    {{/each}}
+                    <!-- <a href="/map/temple-of-anubis"> -->
+                    <!-- <a href="/map/hanamura"> -->
+                    <!-- <a href="/map/volskaya"> -->
+                    <!-- <a href="/map/gibraltar"> -->
+                    <!-- <a href="/map/dorado"> -->
+                    <!-- <a href="/map/route-66"> -->
+                    <!-- <a href="/map/lijiang"> -->
+                    <!-- <a href="/map/ilios"> -->
+                    <!-- <a href="/map/nepal"> -->
+                    <!-- <a href="/map/kings-row"> -->
+                    <!-- <a href="/map/numbani"> -->
+                    <!-- <a href="/map/hollywood"> -->
                 </ul>
             </div>
             <div class="blogroll box">
