@@ -6,21 +6,9 @@
                     <h3 class="title">地图介绍（血包点)</h3>
                 </div>
                 <ul>
-                    {{# each maps_load_img}}
+                    {{# each maps}}
                         <li><a href="/map/{{this.name_en}}" target="_blank"><img src="{{this.load_img}}" alt="" /></a><div class="intro"><span class="type"></span><span class="name">{{this.name_zh}}</span></div></li>
                     {{/each}}
-                    <!-- <a href="/map/temple-of-anubis"> -->
-                    <!-- <a href="/map/hanamura"> -->
-                    <!-- <a href="/map/volskaya"> -->
-                    <!-- <a href="/map/gibraltar"> -->
-                    <!-- <a href="/map/dorado"> -->
-                    <!-- <a href="/map/route-66"> -->
-                    <!-- <a href="/map/lijiang"> -->
-                    <!-- <a href="/map/ilios"> -->
-                    <!-- <a href="/map/nepal"> -->
-                    <!-- <a href="/map/kings-row"> -->
-                    <!-- <a href="/map/numbani"> -->
-                    <!-- <a href="/map/hollywood"> -->
                 </ul>
             </div>
             <div class="blogroll box">
@@ -28,11 +16,9 @@
                     <h3 class="title">直播间</h3>
                 </div>
                 <ul>
-                    <li><img src="/images/tv/tv_douyu_logo.png" alt="斗鱼" /></li>
-                    <li><img src="/images/tv/tv_huya_logo.png" alt="熊猫" /></li>
-                    <li><img src="/images/tv/tv_longzhu_logo.png" alt="龙珠" /></li>
-                    <li><img src="/images/tv/tv_xiongmao_logo.png" alt="战旗" /></li>
-                    <li><img src="/images/tv/tv_zhanqi_logo.png" alt="熊猫" /></li>
+                    {{# each files.tvs}}
+                        <li><img src="{{this.logo_img}}" alt="{{this.name}}" /></li>
+                    {{/each}}
                 </ul>
             </div>
         </div>
@@ -47,27 +33,9 @@
                 </div>
             </div>
             <ul>
-                <li value="bastion" roleType="defense"><a href="/hero/bastion" target="_blank"><img src="/images/hero_icon/icon-bastion.png" alt="" /></a><div class="name">堡垒</div></li>
-                <li value="lucio" roleType="support"><a href="/hero/lucio" target="_blank"><img src="/images/hero_icon/icon-lucio.png" alt="" /></a><div class="name">卢西奥</div></li>
-                <li value="roadhog" roleType="tank"><a href="/hero/roadhog" target="_blank"><img src="/images/hero_icon/icon-roadhog.png" alt="" /></a><div class="name">路霸</div></li>
-                <li value="winston" roleType="tank"><a href="/hero/winston" target="_blank"><img src="/images/hero_icon/icon-winston.png" alt="" /></a><div class="name">温瑟顿</div></li>
-                <li value="dva" roleType="tank"><a href="/hero/dva" target="_blank"><img src="/images/hero_icon/icon-dva.png" alt="" /></a><div class="name">D.Va</div></li>
-                <li value="mccree" roleType="offense"><a href="/hero/mccree" target="_blank"><img src="/images/hero_icon/icon-mccree.png" alt="" /></a><div class="name">麦克雷</div></li>
-                <li value="76-hao" roleType="offense"><a href="/hero/76-hao" target="_blank"><img src="/images/hero_icon/icon-soldier-76.png" alt="" /></a><div class="name">76号</div></li>
-                <li value="zarya" roleType="tank"><a href="/hero/zarya" target="_blank"><img src="/images/hero_icon/icon-zarya.png" alt="" /></a><div class="name">查莉娅</div></li>
-                <li value="frost" roleType="defense"><a href="/hero/frost" target="_blank"><img src="/images/hero_icon/icon-frost.png" alt="" /></a><div class="name">小美</div></li>
-                <li value="mercy" roleType="support"><a href="/hero/mercy" target="_blank"><img src="/images/hero_icon/icon-mercy.png" alt="" /></a><div class="name">天使</div></li>
-                <li value="symmetra" roleType="support"><a href="/hero/symmetra" target="_blank"><img src="/images/hero_icon/icon-symmetra.png" alt="" /></a><div class="name">秩序之光</div></li>
-                <li value="zenyatta" roleType="support"><a href="/hero/zenyatta" target="_blank"><img src="/images/hero_icon/icon-zenyatta.png" alt="" /></a><div class="name">禅娅塔</div></li>
-                <li value="genji" roleType="offense"><a href="/hero/genji" target="_blank"><img src="/images/hero_icon/icon-genji.png" alt="" /></a><div class="name">源氏</div></li>
-                <li value="pharah" roleType="offense"><a href="/hero/pharah" target="_blank"><img src="/images/hero_icon/icon-pharah.png" alt="" /></a><div class="name">法老之鹰</div></li>
-                <li value="torbjorn" roleType="defense"><a href="/hero/torbjorn" target="_blank"><img src="/images/hero_icon/icon-torbjorn.png" alt="" /></a><div class="name">托比昂</div></li>
-                <li value="hanzo" roleType="defense"><a href="/hero/hanzo" target="_blank"><img src="/images/hero_icon/icon-hanzo.png" alt="" /></a><div class="name">半藏</div></li>
-                <li value="reaper" roleType="offense"><a href="/hero/reaper" target="_blank"><img src="/images/hero_icon/icon-reaper.png" alt="" /></a><div class="name">死神</div></li>
-                <li value="tracer" roleType="offense"><a href="/hero/tracer" target="_blank"><img src="/images/hero_icon/icon-tracer.png" alt="" /></a><div class="name">猎空</div></li>
-                <li value="junkrat" roleType="defense"><a href="/hero/junkrat" target="_blank"><img src="/images/hero_icon/icon-junkrat.png" alt="" /></a><div class="name">狂鼠</div></li>
-                <li value="reinhardt" roleType="tank"><a href="/hero/reinhardt" target="_blank"><img src="/images/hero_icon/icon-reinhardt.png" alt="" /></a><div class="name">莱因哈特</div></li>
-                <li value="widowmaker" roleType="defense"><a href="/hero/widowmaker" target="_blank"><img src="/images/hero_icon/icon-widowmaker.png" alt="" /></a><div class="name">黑百合</div></li>
+                {{# each heros}}
+                    <li value="{{this.name_en}}" roleType="defense"><a href="/hero/{{this.name_en}}" target="_blank"><img src="{{this.icon}}" alt="" /></a><div class="name">{{this.name_zh}}</div></li>
+                {{/each}}
             </ul>
         </div>
     </div>
