@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="cn">
     <head>
-        {{#if name}}
-            <title>{{name}}</title>
+        {{#if title}}
+            <title>{{title}}</title>
         {{else}}
             <title>守望先锋</title>
         {{/if}}
@@ -15,7 +15,7 @@
                 src: url(/stylesheets/ow.ttf)
             }
             body {
-                background-image: url('/images/back01.jpg');
+                background-image: url('{{files.body_back_img}}');
                 width: 1200px;
                 margin-left: auto;
                 margin-right: auto;
@@ -203,21 +203,9 @@
         </style>
     </head>
     <body>
-        <img src="/images/left01.png" alt="" / style="   display:none; position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    margin-left: -41%;">
-        <img src="/images/right01.png" alt="" / style=" display:none; position: fixed;
-    width: 100%;
-    right: 0;
-    top: 0;
-    margin-right: -41%;">
         <div class="body">
             <div class="top">
-                <img src="/images/hanzo-genji.png" alt="" />
-
-                <!-- <img src="/images/0_0.jpg" alt="" /> -->
+                <img src="{{files.index_top_img}}" alt="" />
             </div>
         {{{ body }}}
         </div>

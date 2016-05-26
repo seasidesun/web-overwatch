@@ -10,7 +10,7 @@ module.exports = function (app) {
 
     /* views */
     //index
-    app.get('/', function (req, res) { res.render('index', { title: 'Express' }); });
+    app.get('/', control.index);
     //map
     app.get('/map/:mapName', control.getMapByName);
 
